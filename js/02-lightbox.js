@@ -24,19 +24,7 @@ function createTagsOfCards(galleryItems) {
 
 createTagsOfCards(galleryItems);
 
-galleryRef.addEventListener("click", onClickGallery);
-
-var SimpleLightbox = window.SimpleLightbox;
-
-function onClickGallery(event) {
-	event.preventDefault();
-
-	if (event.target.nodeName !== "IMG") {
-		return;
-	}
-
-	var lightbox = new SimpleLightbox(".gallery a", {
-		captionsData: "alt",
-		loadingTimeout: 250,
-	});
-}
+var lightbox = new SimpleLightbox(".gallery a", {
+	captionsData: "alt",
+	captionDelay: 250,
+});
